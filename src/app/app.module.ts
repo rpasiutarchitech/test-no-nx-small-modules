@@ -8,10 +8,10 @@ import {RouterModule, Routes} from '@angular/router';
 
 
 const routes: Routes = [
-  // {
-  //   path: 'lib1',
-  //   loadChildren: () => import('./modules/lib1/architech-lib1.module').then(m => m.ArchitechLib1Module)
-  // },
+  {
+    path: 'lib1',
+    loadChildren: () => import('./modules/lib1/lib1-parent/lib1-parent.module').then(m => m.Lib1ParentModule)
+  },
   // {
   //   path: 'lib2',
   //   loadChildren: () => import('./modules/lib2/architech-lib2.module').then(m => m.ArchitechLib2Module)
