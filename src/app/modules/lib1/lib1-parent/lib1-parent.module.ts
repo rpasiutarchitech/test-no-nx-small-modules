@@ -12,10 +12,10 @@ const routes: Routes = [
         path: 'container1',
         loadChildren: () => import('./../lib1-container1/lib1-container1.module').then(m => m.Lib1Container1Module)
       },
-  //     {
-  //       path: 'container2',
-  //       component: Lib1Container2Component,
-  //     },
+      {
+        path: 'container2',
+        loadChildren: () => import('./../lib1-container2/lib1-container2.module').then(m => m.Lib1Container2Module)
+      },
   //     {
   //       path: 'container3',
   //       component: Lib1Container3Component,
