@@ -24,10 +24,10 @@ const routes: Routes = [
   //   path: 'lib4',
   //   loadChildren: () => import('./modules/lib4/architech-lib4.module').then(m => m.ArchitechLib4Module)
   // },
-  // {
-  //   path: 'lib5',
-  //   loadChildren: () => import('./modules/lib5/architech-lib5.module').then(m => m.ArchitechLib5Module)
-  // },
+  {
+    path: 'lib5',
+    loadChildren: () => import('./modules/lib5/lib5-parent/lib5-parent.module').then(m => m.Lib5ParentModule)
+  },
   // {
   //   path: 'lib6',
   //   loadChildren: () => import('./modules/lib6/architech-lib6.module').then(m => m.ArchitechLib6Module)
