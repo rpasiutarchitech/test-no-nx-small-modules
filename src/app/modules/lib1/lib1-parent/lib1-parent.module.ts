@@ -16,38 +16,38 @@ const routes: Routes = [
         path: 'container2',
         loadChildren: () => import('./../lib1-container2/lib1-container2.module').then(m => m.Lib1Container2Module)
       },
-  //     {
-  //       path: 'container3',
-  //       component: Lib1Container3Component,
-  //     },
-  //     {
-  //       path: 'container4',
-  //       component: Lib1Container4Component,
-  //     },
-  //     {
-  //       path: 'container5',
-  //       component: Lib1Container5Component,
-  //     },
-  //     {
-  //       path: 'container6',
-  //       component: Lib1Container6Component,
-  //     },
-  //     {
-  //       path: 'container7',
-  //       component: Lib1Container7Component,
-  //     },
-  //     {
-  //       path: 'container8',
-  //       component: Lib1Container8Component,
-  //     },
-  //     {
-  //       path: 'container9',
-  //       component: Lib1Container9Component,
-  //     },
-  //     {
-  //       path: 'container10',
-  //       component: Lib1Container10Component,
-  //     },
+      {
+        path: 'container3',
+        loadChildren: () => import('./../lib1-container3/lib1-container3.module').then(m => m.Lib1Container3Module)
+      },
+      {
+        path: 'container4',
+        loadChildren: () => import('./../lib1-container4/lib1-container4.module').then(m => m.Lib1Container4Module)
+      },
+      {
+        path: 'container5',
+        loadChildren: () => import('./../lib1-container5/lib1-container5.module').then(m => m.Lib1Container5Module)
+      },
+      {
+        path: 'container6',
+        loadChildren: () => import('./../lib1-container6/lib1-container6.module').then(m => m.Lib1Container6Module)
+      },
+      {
+        path: 'container7',
+        loadChildren: () => import('./../lib1-container7/lib1-container7.module').then(m => m.Lib1Container7Module)
+      },
+      {
+        path: 'container8',
+        loadChildren: () => import('./../lib1-container8/lib1-container8.module').then(m => m.Lib1Container8Module)
+      },
+      {
+        path: 'container9',
+        loadChildren: () => import('./../lib1-container9/lib1-container9.module').then(m => m.Lib1Container9Module)
+      },
+      {
+        path: 'container10',
+        loadChildren: () => import('./../lib1-container10/lib1-container10.module').then(m => m.Lib1Container10Module)
+      },
       {
         path: '',
         redirectTo: 'container1',
