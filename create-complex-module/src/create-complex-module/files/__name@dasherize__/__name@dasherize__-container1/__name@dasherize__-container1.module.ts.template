@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1Container1Component } from './lib1-container1/lib1-container1.component';
+import { <%= classify(name) %>Container1Component } from './<%= dasherize(name) %>-container1/<%= dasherize(name) %>-container1.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -10,12 +10,12 @@ import {SharedLibModule} from '../../shared/shared-lib/shared-lib.module';
 const routes: Routes = [
   {
     path: '',
-    component: Lib1Container1Component
+    component: <%= classify(name) %>Container1Component
   }
 ];
 
 @NgModule({
-  declarations: [Lib1Container1Component],
+  declarations: [<%= classify(name) %>Container1Component],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -25,4 +25,4 @@ const routes: Routes = [
     SharedLibModule
   ]
 })
-export class Lib1Container1Module { }
+export class <%= classify(name) %>Container1Module { }

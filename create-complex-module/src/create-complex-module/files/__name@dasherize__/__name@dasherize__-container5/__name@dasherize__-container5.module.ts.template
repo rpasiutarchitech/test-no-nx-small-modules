@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1Container5Component } from './lib1-container5/lib1-container5.component';
+import { <%= classify(name) %>Container5Component } from './<%= dasherize(name) %>-container5/<%= dasherize(name) %>-container5.component';
 import {RouterModule, Routes} from '@angular/router';
 import {SharedLibModule} from '../../shared/shared-lib/shared-lib.module';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -8,12 +8,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 const routes: Routes = [
   {
     path: '',
-    component: Lib1Container5Component
+    component: <%= classify(name) %>Container5Component
   }
 ];
 
 @NgModule({
-  declarations: [Lib1Container5Component],
+  declarations: [<%= classify(name) %>Container5Component],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -21,4 +21,4 @@ const routes: Routes = [
     MatTabsModule
   ]
 })
-export class Lib1Container5Module { }
+export class <%= classify(name) %>Container5Module { }

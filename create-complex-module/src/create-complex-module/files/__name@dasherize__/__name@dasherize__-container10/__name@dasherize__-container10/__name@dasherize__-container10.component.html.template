@@ -1,2 +1,2 @@
-<p>lib1-container10 works!</p>
-<app-lib1-shared-component1></app-lib1-shared-component1>
+<p><%= dasherize(name) %>-container10 works!</p>
+<app-<%= dasherize(name) %>-shared-component1></app-<%= dasherize(name) %>-shared-component1>

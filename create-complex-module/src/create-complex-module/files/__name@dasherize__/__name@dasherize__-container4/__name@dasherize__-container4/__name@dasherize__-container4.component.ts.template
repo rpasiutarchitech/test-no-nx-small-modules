@@ -4,11 +4,11 @@ export interface Section {
   updated: Date;
 }
 @Component({
-  selector: 'app-lib1-container4',
-  templateUrl: './lib1-container4.component.html',
-  styleUrls: ['./lib1-container4.component.scss']
+  selector: 'app-<%= dasherize(name) %>-container4',
+  templateUrl: './<%= dasherize(name) %>-container4.component.html',
+  styleUrls: ['./<%= dasherize(name) %>-container4.component.scss']
 })
-export class Lib1Container4Component implements OnInit {
+export class <%= classify(name) %>Container4Component implements OnInit {
   folders: Section[] = [
     {
       name: 'Photos',

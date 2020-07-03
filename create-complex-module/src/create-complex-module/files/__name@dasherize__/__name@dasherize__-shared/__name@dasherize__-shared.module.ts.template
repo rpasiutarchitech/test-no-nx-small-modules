@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1SharedComponent1Component } from './lib1-shared-component1/lib1-shared-component1.component';
+import { <%= classify(name) %>SharedComponent1Component } from './<%= dasherize(name) %>-shared-component1/<%= dasherize(name) %>-shared-component1.component';
 import {SharedLibModule} from '../../shared/shared-lib/shared-lib.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
@@ -15,13 +15,13 @@ import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
-  declarations: [Lib1SharedComponent1Component],
+  declarations: [<%= classify(name) %>SharedComponent1Component],
   imports: [
     CommonModule,
     SharedLibModule,
 
     MatIconModule, MatDividerModule, MatButtonModule, MatCardModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatListModule, MatTabsModule
   ],
-  exports: [Lib1SharedComponent1Component]
+  exports: [<%= classify(name) %>SharedComponent1Component]
 })
-export class Lib1SharedModule { }
+export class <%= classify(name) %>SharedModule { }

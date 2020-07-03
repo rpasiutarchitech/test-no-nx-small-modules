@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1Container4Component } from './lib1-container4/lib1-container4.component';
+import { <%= classify(name) %>Container4Component } from './<%= dasherize(name) %>-container4/<%= dasherize(name) %>-container4.component';
 import {RouterModule, Routes} from '@angular/router';
 import {SharedLibModule} from '../../shared/shared-lib/shared-lib.module';
 import {MatListModule} from '@angular/material/list';
@@ -11,12 +11,12 @@ import {MatLineModule} from '@angular/material/core';
 const routes: Routes = [
   {
     path: '',
-    component: Lib1Container4Component
+    component: <%= classify(name) %>Container4Component
   }
 ];
 
 @NgModule({
-  declarations: [Lib1Container4Component],
+  declarations: [<%= classify(name) %>Container4Component],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -27,4 +27,4 @@ const routes: Routes = [
     MatLineModule
   ]
 })
-export class Lib1Container4Module { }
+export class <%= classify(name) %>Container4Module { }

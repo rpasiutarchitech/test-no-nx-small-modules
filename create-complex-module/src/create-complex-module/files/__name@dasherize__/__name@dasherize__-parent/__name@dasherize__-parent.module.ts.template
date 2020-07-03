@@ -1,52 +1,52 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {Lib1ParentContainerComponent} from './lib1-parent-container/lib1-parent-container.component';
+import {<%= classify(name) %>ParentContainerComponent} from './<%= dasherize(name) %>-parent-container/<%= dasherize(name) %>-parent-container.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: Lib1ParentContainerComponent,
+    component: <%= classify(name) %>ParentContainerComponent,
     children: [
       {
         path: 'container1',
-        loadChildren: () => import('./../lib1-container1/lib1-container1.module').then(m => m.Lib1Container1Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container1/<%= dasherize(name) %>-container1.module').then(m => m.<%= classify(name) %>Container1Module)
       },
       {
         path: 'container2',
-        loadChildren: () => import('./../lib1-container2/lib1-container2.module').then(m => m.Lib1Container2Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container2/<%= dasherize(name) %>-container2.module').then(m => m.<%= classify(name) %>Container2Module)
       },
       {
         path: 'container3',
-        loadChildren: () => import('./../lib1-container3/lib1-container3.module').then(m => m.Lib1Container3Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container3/<%= dasherize(name) %>-container3.module').then(m => m.<%= classify(name) %>Container3Module)
       },
       {
         path: 'container4',
-        loadChildren: () => import('./../lib1-container4/lib1-container4.module').then(m => m.Lib1Container4Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container4/<%= dasherize(name) %>-container4.module').then(m => m.<%= classify(name) %>Container4Module)
       },
       {
         path: 'container5',
-        loadChildren: () => import('./../lib1-container5/lib1-container5.module').then(m => m.Lib1Container5Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container5/<%= dasherize(name) %>-container5.module').then(m => m.<%= classify(name) %>Container5Module)
       },
       {
         path: 'container6',
-        loadChildren: () => import('./../lib1-container6/lib1-container6.module').then(m => m.Lib1Container6Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container6/<%= dasherize(name) %>-container6.module').then(m => m.<%= classify(name) %>Container6Module)
       },
       {
         path: 'container7',
-        loadChildren: () => import('./../lib1-container7/lib1-container7.module').then(m => m.Lib1Container7Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container7/<%= dasherize(name) %>-container7.module').then(m => m.<%= classify(name) %>Container7Module)
       },
       {
         path: 'container8',
-        loadChildren: () => import('./../lib1-container8/lib1-container8.module').then(m => m.Lib1Container8Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container8/<%= dasherize(name) %>-container8.module').then(m => m.<%= classify(name) %>Container8Module)
       },
       {
         path: 'container9',
-        loadChildren: () => import('./../lib1-container9/lib1-container9.module').then(m => m.Lib1Container9Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container9/<%= dasherize(name) %>-container9.module').then(m => m.<%= classify(name) %>Container9Module)
       },
       {
         path: 'container10',
-        loadChildren: () => import('./../lib1-container10/lib1-container10.module').then(m => m.Lib1Container10Module)
+        loadChildren: () => import('./../<%= dasherize(name) %>-container10/<%= dasherize(name) %>-container10.module').then(m => m.<%= classify(name) %>Container10Module)
       },
       {
         path: '',
@@ -62,10 +62,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [Lib1ParentContainerComponent],
+  declarations: [<%= classify(name) %>ParentContainerComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ]
 })
-export class Lib1ParentModule { }
+export class <%= classify(name) %>ParentModule { }

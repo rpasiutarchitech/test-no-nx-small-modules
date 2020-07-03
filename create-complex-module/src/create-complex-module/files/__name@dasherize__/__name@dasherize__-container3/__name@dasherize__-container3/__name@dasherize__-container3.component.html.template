@@ -1,4 +1,4 @@
-<p>lib1-container3 works!</p>
+<p><%= dasherize(name) %>-container3 works!</p>
 <mat-accordion class="example-headers-align">
   <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
     <mat-expansion-panel-header>

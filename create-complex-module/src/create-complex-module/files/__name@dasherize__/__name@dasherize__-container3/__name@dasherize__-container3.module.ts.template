@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1Container3Component } from './lib1-container3/lib1-container3.component';
+import { <%= classify(name) %>Container3Component } from './<%= dasherize(name) %>-container3/<%= dasherize(name) %>-container3.component';
 import {RouterModule, Routes} from '@angular/router';
 import {SharedLibModule} from '../../shared/shared-lib/shared-lib.module';
 import {MatExpansionModule, MatExpansionPanel} from '@angular/material/expansion';
@@ -13,12 +13,12 @@ import {MatInputModule} from '@angular/material/input';
 const routes: Routes = [
   {
     path: '',
-    component: Lib1Container3Component
+    component: <%= classify(name) %>Container3Component
   }
 ];
 
 @NgModule({
-  declarations: [Lib1Container3Component],
+  declarations: [<%= classify(name) %>Container3Component],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -30,4 +30,4 @@ const routes: Routes = [
     MatInputModule
   ]
 })
-export class Lib1Container3Module { }
+export class <%= classify(name) %>Container3Module { }

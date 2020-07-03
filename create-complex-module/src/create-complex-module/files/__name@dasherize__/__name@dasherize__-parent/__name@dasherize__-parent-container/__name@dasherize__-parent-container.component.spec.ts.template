@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Lib1ParentContainerComponent } from './lib1-parent-container.component';
+import { <%= classify(name) %>ParentContainerComponent } from './<%= dasherize(name) %>-parent-container.component';
 
-describe('Lib1ParentContainerComponent', () => {
-  let component: Lib1ParentContainerComponent;
-  let fixture: ComponentFixture<Lib1ParentContainerComponent>;
+describe('<%= classify(name) %>ParentContainerComponent', () => {
+  let component: <%= classify(name) %>ParentContainerComponent;
+  let fixture: ComponentFixture<<%= classify(name) %>ParentContainerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Lib1ParentContainerComponent ]
+      declarations: [ <%= classify(name) %>ParentContainerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Lib1ParentContainerComponent);
+    fixture = TestBed.createComponent(<%= classify(name) %>ParentContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1Container2Component } from './lib1-container2/lib1-container2.component';
+import { <%= classify(name) %>Container2Component } from './<%= dasherize(name) %>-container2/<%= dasherize(name) %>-container2.component';
 import {RouterModule, Routes} from '@angular/router';
 import {SharedLibModule} from '../../shared/shared-lib/shared-lib.module';
 import {MatCardModule} from '@angular/material/card';
@@ -9,12 +9,12 @@ import {MatCardModule} from '@angular/material/card';
 const routes: Routes = [
   {
     path: '',
-    component: Lib1Container2Component
+    component: <%= classify(name) %>Container2Component
   }
 ];
 
 @NgModule({
-  declarations: [Lib1Container2Component],
+  declarations: [<%= classify(name) %>Container2Component],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -22,4 +22,4 @@ const routes: Routes = [
     MatCardModule
   ]
 })
-export class Lib1Container2Module { }
+export class <%= classify(name) %>Container2Module { }

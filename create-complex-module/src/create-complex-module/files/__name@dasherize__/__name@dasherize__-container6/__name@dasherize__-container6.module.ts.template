@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Lib1Container6Component } from './lib1-container6/lib1-container6.component';
+import { <%= classify(name) %>Container6Component } from './<%= dasherize(name) %>-container6/<%= dasherize(name) %>-container6.component';
 import {RouterModule, Routes} from '@angular/router';
-import {Lib1SharedModule} from '../lib1-shared/lib1-shared.module';
+import {<%= classify(name) %>SharedModule} from '../<%= dasherize(name) %>-shared/<%= dasherize(name) %>-shared.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: Lib1Container6Component
+    component: <%= classify(name) %>Container6Component
   }
 ];
 
 @NgModule({
-  declarations: [Lib1Container6Component],
+  declarations: [<%= classify(name) %>Container6Component],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    Lib1SharedModule
+    <%= classify(name) %>SharedModule
   ]
 })
-export class Lib1Container6Module { }
+export class <%= classify(name) %>Container6Module { }
